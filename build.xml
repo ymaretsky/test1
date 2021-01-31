@@ -10,7 +10,7 @@
          <javac srcdir="${src}" destdir="${classes}" includeAntRuntime="false"/>
      </target>
      <target name="run" depends="compile">
-         <java classname="${ant.project.name}" classpath="${classes}"/>
+         <java classname="${ant.project.name}" classpath="${classes}" fork="true"/>
      </target>
      <target name="package" depends="compile">
          <jar destfile="${build}/${ant.project.name}.jar" basedir="${classes}">
