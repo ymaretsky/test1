@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-public class HelloWorld extends JFrame {
+// public class HelloWorld extends JFrame {
     public static void main(String[] args) {
         new HelloWorld();
     }
@@ -16,4 +16,4 @@ public class HelloWorld extends JFrame {
     String sayHello() {
         return "Hello, World!";
     }
-}
+// }
