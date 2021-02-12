@@ -5,7 +5,6 @@
      <property name="build" location="build"/>
      <property name="classes" location="${build}/classes"/>
      <!-- define all targets -->
-  <taskdef  resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"/>
      <target name="compile">
          <mkdir dir="${classes}"/>
          <javac srcdir="${src}" destdir="${classes}" includeAntRuntime="false"/>
@@ -25,8 +24,11 @@
      </target>
 
   <target name="checkstyle"
-        description="Generates a report of code convention violations."
+  description="Generates a report of code convention violations."
 	depends="init-checkstyle">
+  <taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties"
+         classpath="/usr/share/java/checkstyle.jar"/>
+
   <!-- See http://checkstyle.sourceforge.net/anttask.html
        for full options of using checkstyle with ant-->
   <checkstyle config="checkstyle.xml"
