@@ -22,5 +22,16 @@
      <target name="clean">
          <delete dir="${build}"/>
      </target>
+     <target name="checkstyle"
+        description="Generates a report of code">
+        <checkstyle config="docs/sun_checks.xml"
+              failureProperty="checkstyle.failure"
+              failOnViolation="false">
+          <formatter type="xml" tofile="checkstyle_report.xml"/>
+          <fileset dir="src" includes="**/*.java"/>
+        </checkstyle>
+        <style in="checkstyle_report.xml" out="checkstyle_report.html"
+        style="checkstyle.xsl"/>
+     </target>
  </project>
 
