@@ -24,7 +24,7 @@
      </target>
 
      	<target name="checksimple">
-	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpath="/usr/share/java/checkstyle.jar"/>
+	<taskdef resource="com/puppycrawl/tools/checkstyle/ant/checkstyle-ant-task.properties" classpath="checkstyle.jar"/>
 		<checkstyle config="sun_checks.xml">
   			<fileset dir="src" includes="**/*.java"/>
   			<formatter type="plain"/>
