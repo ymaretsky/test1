@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
- <project name="HelloWorld" default="run">
+<project xmlns:ivy="antlib:org.apache.ivy.ant" name="HelloWorld" default="build" basedir=".">
      <!-- define names of directories -->
      <property name="src" location="src"/>
      <property name="build" location="build"/>
