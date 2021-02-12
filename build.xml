@@ -23,6 +23,10 @@
          <delete dir="${build}"/>
      </target>
 
+        <target name="checksimple">
+		<checkstyle config="/usr/share/checkstyle/sun_checks.xml" file="src/HelloWorld.java"/>
+	</target>
+	
   <target name="checkstyle"
   description="Generates a report of code convention violations."
 	depends="init-checkstyle">
@@ -51,12 +55,12 @@
 
 <!-- ##########################################################################
      ####################### target: resolve ##################################
-     ########################################################################## -->
+     ##########################################################################
     <target name="resolve" description="retrieve dependencies with ivy" depends="init-ivy">
     	<ivy:settings file="ivysettings.xml" />
         <ivy:retrieve />
     </target>
-
+-->
 
 <!-- ##########################################################################
      ####### Downloading and setup Ivy for managing dependencies ##############
