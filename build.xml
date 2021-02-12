@@ -25,14 +25,11 @@
      </target>
      <target name="checkstyle" description="Generates a report of code">
       <checkstyle config="/usr/share/checkstyle/sun_checks.xml">
-      <fileset dir="src/checkstyle" includes="**/*.java"/>
+      <fileset dir="src" includes="**/*.java"/>
       <formatter type="plain"/>
       <formatter type="xml" toFile="build/checkstyle_errors.xml"/>
       </checkstyle>
-      
      </target>
-  
-</checkstyle>
-  
- </project>
+
+</project>
 
