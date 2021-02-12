@@ -24,7 +24,7 @@
      </target>
      <target name="checkstyle"
         description="Generates a report of code">
-        <checkstyle config="docs/sun_checks.xml"
+        <checkstyle config="/usr/share/checkstyle/sun_checks.xml"
               failureProperty="checkstyle.failure"
               failOnViolation="false">
           <formatter type="xml" tofile="checkstyle_report.xml"/>
